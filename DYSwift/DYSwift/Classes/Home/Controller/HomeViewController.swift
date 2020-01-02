@@ -8,14 +8,26 @@
 
 import UIKit
 
+private let pageTitleViewH: CGFloat = 40
+
 class HomeViewController: UIViewController {
+    
+    fileprivate lazy var pageTitleView: PageTitleView = {
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: pageTitleViewH)
+        
+        let pageTitleView = PageTitleView(frame: frame, titles: titles)
+ 
+        return pageTitleView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        
+        view.addSubview(pageTitleView)
     }
-    
     
 }
 
@@ -41,6 +53,10 @@ extension HomeViewController {
         let qrcodeItem = UIBarButtonItem(imageName: "Image_scan", highImageName: "Image_scan_click", size: size)
         
         self.navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
+        
+    }
+    
+    private func setTitleView() {
         
     }
 }
