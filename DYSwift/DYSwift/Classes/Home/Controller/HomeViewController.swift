@@ -12,12 +12,12 @@ private let kPageTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
     
-    fileprivate lazy var pageTitleView: PageTitleView = {
+    private lazy var pageTitleView: PageTitleView = {
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kPageTitleViewH)
         
         let pageTitleView = PageTitleView(frame: frame, titles: titles)
-        
+        pageTitleView.delegate = self
         return pageTitleView
     }()
     
@@ -36,13 +36,14 @@ class HomeViewController: UIViewController {
         }
         
         let pageContentView = PageContentView(frame: contentFrame, childVCs: childVCs, parentViewController: self)
-       
+        pageContentView.delegate = self
         return pageContentView
-    }()
+        
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         setupUI()
         
         view.addSubview(pageTitleView)
@@ -77,6 +78,23 @@ extension HomeViewController {
     }
     
     private func setTitleView() {
+        
+    }
+}
+
+// MARK:- 遵守PageTitleViewDelegate协议
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleSelect(_ titleView: PageTitleView, _ index: Int) {
+        
+        pageContentView.setCurrentIndex(index)
+    }
+}
+
+// MARK:- 遵守PageContentViewDelegate协议
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentViewScroll(_ contentView: PageContentView, _ progress: CGFloat, _ sourceIndex: Int, _ targetIndex: Int) {
+
+        pageTitleView.setTitleWithProgress(progress, sourceIndex, targetIndex)
         
     }
 }
