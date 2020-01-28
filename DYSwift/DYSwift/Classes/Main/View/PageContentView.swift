@@ -46,7 +46,7 @@ class PageContentView: UIView {
         self.childVCs = childVCs
         self.parentViewController = parentViewController
         super.init(frame: frame)
-        self.backgroundColor = .green
+        
         setupUI()
     }
     

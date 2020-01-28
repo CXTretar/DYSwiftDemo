@@ -23,13 +23,14 @@ class HomeViewController: UIViewController {
     
     private lazy var pageContentView: PageContentView = { [weak self] in
         // 1.确定内容的frame
-        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kPageTitleViewH
+        let contentH : CGFloat = kScreenH - kStatusBarH - kNavigationBarH - kPageTitleViewH - kTabbarH
         let contentY = kStatusBarH + kNavigationBarH + kPageTitleViewH
         let contentFrame = CGRect(x: 0, y:contentY, width: kScreenW, height: contentH)
         
         // 2.确定所有的子控制器
         var childVCs = [UIViewController]()
-        for i in 0..<4 {
+        childVCs.append(RecommendViewController())
+        for i in 0..<3 {
             let childVC = UIViewController()
             childVC.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(childVC)
@@ -43,7 +44,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        automaticallyAdjustsScrollViewInsets = false
         setupUI()
         
         view.addSubview(pageTitleView)
