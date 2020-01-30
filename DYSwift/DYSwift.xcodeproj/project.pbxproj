@@ -10,6 +10,10 @@
 		CA233A3923DFDFB9007F0D53 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A3823DFDFB9007F0D53 /* RecommendViewController.swift */; };
 		CA233A3C23E08B68007F0D53 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A3A23E08B68007F0D53 /* CollectionHeaderView.swift */; };
 		CA233A3D23E08B68007F0D53 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA233A3B23E08B68007F0D53 /* CollectionHeaderView.xib */; };
+		CA233A4223E30C72007F0D53 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A4023E30C72007F0D53 /* CollectionNormalCell.swift */; };
+		CA233A4323E30C72007F0D53 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA233A4123E30C72007F0D53 /* CollectionNormalCell.xib */; };
+		CA233A4623E31473007F0D53 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A4423E31473007F0D53 /* CollectionPrettyCell.swift */; };
+		CA233A4723E31473007F0D53 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA233A4523E31473007F0D53 /* CollectionPrettyCell.xib */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
 		CA94AA7623BAF426009D27EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7423BAF426009D27EB /* LaunchScreen.storyboard */; };
@@ -32,6 +36,10 @@
 		CA233A3823DFDFB9007F0D53 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		CA233A3A23E08B68007F0D53 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		CA233A3B23E08B68007F0D53 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		CA233A4023E30C72007F0D53 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		CA233A4123E30C72007F0D53 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		CA233A4423E31473007F0D53 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		CA233A4523E31473007F0D53 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA94AA7223BAF426009D27EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,6 +233,10 @@
 			children = (
 				CA233A3A23E08B68007F0D53 /* CollectionHeaderView.swift */,
 				CA233A3B23E08B68007F0D53 /* CollectionHeaderView.xib */,
+				CA233A4023E30C72007F0D53 /* CollectionNormalCell.swift */,
+				CA233A4123E30C72007F0D53 /* CollectionNormalCell.xib */,
+				CA233A4423E31473007F0D53 /* CollectionPrettyCell.swift */,
+				CA233A4523E31473007F0D53 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,7 +362,9 @@
 			files = (
 				CA94AA7623BAF426009D27EB /* LaunchScreen.storyboard in Resources */,
 				CA233A3D23E08B68007F0D53 /* CollectionHeaderView.xib in Resources */,
+				CA233A4323E30C72007F0D53 /* CollectionNormalCell.xib in Resources */,
 				CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */,
+				CA233A4723E31473007F0D53 /* CollectionPrettyCell.xib in Resources */,
 				CA94AA9323BB7EAA009D27EB /* Main.storyboard in Resources */,
 				CA94AA9923BCEE61009D27EB /* Live.storyboard in Resources */,
 				CA94AA9723BCEE3D009D27EB /* Home.storyboard in Resources */,
@@ -376,6 +390,8 @@
 				CA94AAB023BCF30F009D27EB /* HomeViewController.swift in Sources */,
 				CA94AABB23BD916E009D27EB /* UIColor-Extentsion.swift in Sources */,
 				CA94AAB723BD7F83009D27EB /* Common.swift in Sources */,
+				CA233A4623E31473007F0D53 /* CollectionPrettyCell.swift in Sources */,
+				CA233A4223E30C72007F0D53 /* CollectionNormalCell.swift in Sources */,
 				CA233A3923DFDFB9007F0D53 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

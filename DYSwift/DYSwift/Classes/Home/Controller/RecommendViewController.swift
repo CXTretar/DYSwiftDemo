@@ -11,10 +11,12 @@ import UIKit
 private let kItemMargin : CGFloat = 10
 private let kHeaderViewH : CGFloat = 50
 
-private let kItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kItemH = kItemW * 3 / 4
+private let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
+private let kNormalItemH = kNormalItemW * 3 / 4
+private let kPrettyItemH = kNormalItemW * 4 / 3
 
-private let collectionCellID = "collectionCellID"
+private let kCollectionNormalCellID = "kCollectionNormalCellID"
+private let kCollectionPrettyCellID = "kCollectionPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {
@@ -23,7 +25,7 @@ class RecommendViewController: UIViewController {
     private lazy var collectionView : UICollectionView = {[unowned self] in
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kItemH)
+        layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
         layout.minimumInteritemSpacing = kItemMargin
         layout.minimumLineSpacing = 0
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
@@ -32,16 +34,18 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .white
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionCellID)
+        collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kCollectionNormalCellID)
+        collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kCollectionPrettyCellID)
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
-    }()
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange;
-       
+        
         setupUI()
     }
     
@@ -54,29 +58,44 @@ extension RecommendViewController {
     }
 }
 
-extension RecommendViewController : UICollectionViewDataSource {
+extension RecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 12;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 8
+        }
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var collectionCell : UICollectionViewCell!
+        
+        if indexPath.section == 1 {
+            collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionPrettyCellID, for: indexPath)
+        }else {
+            collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionNormalCellID, for: indexPath)
+        }
+        
+        return collectionCell;
+        
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
         return headerView
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 9;
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 1 {
-            return 8;
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(width: kNormalItemW, height: kPrettyItemH)
+        }else {
+            return CGSize(width: kNormalItemW, height: kNormalItemH)
         }
-        return 10;
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellID, for: indexPath)
-        collectionCell.backgroundColor = .blue
-        return collectionCell;
-        
-    }
-
 }
