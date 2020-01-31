@@ -55,6 +55,16 @@ extension RecommendViewController {
     
     private func setupUI() {
         view.addSubview(collectionView)
+        
+        loadData()
+    }
+}
+
+extension RecommendViewController {
+    private func loadData() {
+        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: nil) { (result) in
+            print(result)
+        }
     }
 }
 
