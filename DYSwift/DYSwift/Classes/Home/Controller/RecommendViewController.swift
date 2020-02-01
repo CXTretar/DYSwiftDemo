@@ -20,7 +20,8 @@ private let kCollectionPrettyCellID = "kCollectionPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
 class RecommendViewController: UIViewController {
-    
+
+    private lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     
     private lazy var collectionView : UICollectionView = {[unowned self] in
         
@@ -62,9 +63,7 @@ extension RecommendViewController {
 
 extension RecommendViewController {
     private func loadData() {
-        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: nil) { (result) in
-            print(result)
-        }
+        recommendVM.requestData()
     }
 }
 
