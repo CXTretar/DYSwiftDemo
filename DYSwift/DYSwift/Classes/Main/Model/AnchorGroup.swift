@@ -19,9 +19,9 @@ class AnchorGroup: NSObject {
         }
     }
     var tag_name : String = ""
-     /// 组显示的图标
+    /// 组显示的图标
     var icon_name : String = "home_header_normal"
-  
+    
     /// 定义主播的模型对象数组
     lazy var anchors : [AnchorModel] = [AnchorModel]()
     
@@ -30,6 +30,9 @@ class AnchorGroup: NSObject {
         
         setValuesForKeys(dict)
     }
- 
+    override init() {
+        
+    }
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+
 }

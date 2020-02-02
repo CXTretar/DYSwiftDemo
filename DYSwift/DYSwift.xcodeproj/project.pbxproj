@@ -20,6 +20,7 @@
 		CA233A4E23E5CA25007F0D53 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A4D23E5CA25007F0D53 /* RecommendViewModel.swift */; };
 		CA233A5023E5CCC4007F0D53 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A4F23E5CCC4007F0D53 /* AnchorGroup.swift */; };
 		CA233A5223E5CE01007F0D53 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A5123E5CE01007F0D53 /* AnchorModel.swift */; };
+		CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
 		CA94AA7623BAF426009D27EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7423BAF426009D27EB /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		CA233A4D23E5CA25007F0D53 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
 		CA233A4F23E5CCC4007F0D53 /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		CA233A5123E5CE01007F0D53 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA94AA7223BAF426009D27EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				CA233A4123E30C72007F0D53 /* CollectionNormalCell.xib */,
 				CA233A4423E31473007F0D53 /* CollectionPrettyCell.swift */,
 				CA233A4523E31473007F0D53 /* CollectionPrettyCell.xib */,
+				CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				CA233A5023E5CCC4007F0D53 /* AnchorGroup.swift in Sources */,
 				CA233A4E23E5CA25007F0D53 /* RecommendViewModel.swift in Sources */,
 				CA94AABB23BD916E009D27EB /* UIColor-Extentsion.swift in Sources */,
+				CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */,
 				CA233A4B23E5C996007F0D53 /* NSDate-Extension.swift in Sources */,
 				CA94AAB723BD7F83009D27EB /* Common.swift in Sources */,
 				CA233A4623E31473007F0D53 /* CollectionPrettyCell.swift in Sources */,
