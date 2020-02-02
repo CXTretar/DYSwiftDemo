@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="228" height="217"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX7-7O-XY9">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oX7-7O-XY9">
                         <rect key="frame" x="0.0" y="193" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="tXS-xs-n6D"/>
@@ -46,7 +46,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Cy-pK-toE">
-                        <rect key="frame" x="160" y="8" width="60" height="20"/>
+                        <rect key="frame" x="163" y="5" width="60" height="20"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="rcW-Nt-m5s"/>
@@ -56,17 +56,23 @@
                         <state key="normal" title="666在线">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="Caj-BP-wfc" firstAttribute="top" secondItem="UgF-mX-fZs" secondAttribute="bottom" constant="5" id="C1v-78-svX"/>
-                <constraint firstAttribute="trailing" secondItem="6Cy-pK-toE" secondAttribute="trailing" constant="8" id="Fco-cw-7N4"/>
+                <constraint firstAttribute="trailing" secondItem="6Cy-pK-toE" secondAttribute="trailing" constant="5" id="Fco-cw-7N4"/>
                 <constraint firstAttribute="trailing" secondItem="UgF-mX-fZs" secondAttribute="trailing" id="SGj-9I-Fwt"/>
                 <constraint firstAttribute="bottom" secondItem="oX7-7O-XY9" secondAttribute="bottom" constant="10" id="SfM-Mm-x3a"/>
                 <constraint firstItem="oX7-7O-XY9" firstAttribute="top" secondItem="Caj-BP-wfc" secondAttribute="bottom" constant="5" id="W7V-cw-AQY"/>
                 <constraint firstItem="oX7-7O-XY9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dHu-nL-bsz"/>
-                <constraint firstItem="6Cy-pK-toE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="f7r-m5-YZc"/>
+                <constraint firstItem="6Cy-pK-toE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="f7r-m5-YZc"/>
                 <constraint firstItem="UgF-mX-fZs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ghr-2A-OQW"/>
                 <constraint firstAttribute="trailing" secondItem="Caj-BP-wfc" secondAttribute="trailing" constant="5" id="ixh-fE-s2e"/>
                 <constraint firstItem="Caj-BP-wfc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t0d-5l-Yie"/>
@@ -75,6 +81,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="228" height="217"/>
             <connections>
+                <outlet property="cityBtn" destination="oX7-7O-XY9" id="van-PA-BLm"/>
                 <outlet property="iconImageView" destination="UgF-mX-fZs" id="Khd-t9-x5p"/>
                 <outlet property="nickNameLabel" destination="Caj-BP-wfc" id="FAt-lJ-ecT"/>
                 <outlet property="onlineBtn" destination="6Cy-pK-toE" id="5wk-l1-rqR"/>

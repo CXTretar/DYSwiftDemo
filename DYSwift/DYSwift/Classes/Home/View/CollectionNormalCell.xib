@@ -45,7 +45,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-EN-Gc9">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-EN-Gc9">
                         <rect key="frame" x="358" y="270" width="60" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="666在线" image="Image_online"/>
@@ -73,6 +73,7 @@
                 <outlet property="iconImageView" destination="vNI-Ys-A9e" id="A3I-zd-aFd"/>
                 <outlet property="nickNameLabel" destination="uzF-7z-t0m" id="caL-p1-Fvi"/>
                 <outlet property="onlineBtn" destination="Hed-EN-Gc9" id="ySQ-RM-KEa"/>
+                <outlet property="roomNameLabel" destination="zzA-Vd-iA8" id="L5l-bS-KJz"/>
             </connections>
             <point key="canvasLocation" x="-576" y="23"/>
         </collectionViewCell>

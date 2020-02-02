@@ -88,6 +88,8 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
         if indexPath.section == 1 {
            collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionPrettyCellID, for: indexPath) as! CollectionPrettyCell
         }else {
+            
+//            print("\(anchor) ++ \(indexPath.section)")
             collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionNormalCellID, for: indexPath) as! CollectionNormalCell
         }
         

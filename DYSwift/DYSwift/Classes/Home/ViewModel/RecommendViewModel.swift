@@ -83,16 +83,13 @@ extension RecommendViewModel {
             guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {
                 return
             }
-            // 2.1.创建组
-            let group = AnchorGroup()
-            
-            // 2.2.遍历dataArray的所有的字典
+
             for dict in dataArray {
-                group.anchors.append(AnchorModel(dict: dict))
+                 let group = AnchorGroup(dict: dict)
+                 // 2.1.将group,添加到anchorGroups
+                 self.anchorGroups.append(group)
             }
             
-            // 2.3.将group,添加到anchorGroups
-            self.anchorGroups.append(group)
             print("finish3")
             dispatchGroup.leave()
         }
