@@ -14,6 +14,8 @@ class RecommendViewModel {
     private lazy var bigdataGroup : AnchorGroup = AnchorGroup()
     private lazy var prettyGroup : AnchorGroup = AnchorGroup()
     
+    lazy var cycleModels : [CycleModel] = [CycleModel]()
+    
 }
 
 // MARK:- 加载网络数据
@@ -43,7 +45,7 @@ extension RecommendViewModel {
                 //                print(anchor.description)
                 self.bigdataGroup.anchors.append(anchor)
             }
-            print("finish1")
+  
             dispatchGroup.leave()
         }
         
@@ -69,7 +71,6 @@ extension RecommendViewModel {
                 let anchor = AnchorModel(dict: dict)
                 self.prettyGroup.anchors.append(anchor)
             }
-            print("finish2")
             dispatchGroup.leave()
         }
         
@@ -90,15 +91,31 @@ extension RecommendViewModel {
                  self.anchorGroups.append(group)
             }
             
-            print("finish3")
             dispatchGroup.leave()
         }
         
         // 完成回调
         dispatchGroup.notify(queue: .main) {
-            print("finish")
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigdataGroup, at: 0)
+            finishedCallback()
+        }
+    }
+    
+    func requestCycleData(finishedCallback: @escaping ()->()) {
+        NetworkTools.requestData(type: .POST, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            guard let resultDict = result as?  [String : NSObject] else {
+                return
+            }
+            
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else {
+                return
+            }
+            
+            for dict in dataArray {
+               self.cycleModels.append(CycleModel(dict: dict))
+            }
+            
             finishedCallback()
         }
     }

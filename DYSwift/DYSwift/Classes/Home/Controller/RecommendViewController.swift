@@ -14,6 +14,7 @@ private let kHeaderViewH : CGFloat = 50
 private let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 private let kNormalItemH = kNormalItemW * 3 / 4
 private let kPrettyItemH = kNormalItemW * 4 / 3
+private let kCycleViewH = kScreenW * 3 / 8
 
 private let kCollectionNormalCellID = "kCollectionNormalCellID"
 private let kCollectionPrettyCellID = "kCollectionPrettyCellID"
@@ -43,6 +44,12 @@ class RecommendViewController: UIViewController {
         return collectionView
         }()
     
+    private lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.recommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        return cycleView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange;
@@ -56,7 +63,8 @@ extension RecommendViewController {
     
     private func setupUI() {
         view.addSubview(collectionView)
-        
+        collectionView.addSubview(cycleView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
         loadData()
     }
 }
@@ -65,6 +73,10 @@ extension RecommendViewController {
     private func loadData() {
         recommendVM.requestData {
             self.collectionView.reloadData()
+        }
+        
+        recommendVM.requestCycleData {
+            self.cycleView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }
@@ -88,8 +100,6 @@ extension RecommendViewController : UICollectionViewDataSource, UICollectionView
         if indexPath.section == 1 {
            collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionPrettyCellID, for: indexPath) as! CollectionPrettyCell
         }else {
-            
-//            print("\(anchor) ++ \(indexPath.section)")
             collectionCell  = collectionView.dequeueReusableCell(withReuseIdentifier: kCollectionNormalCellID, for: indexPath) as! CollectionNormalCell
         }
         
