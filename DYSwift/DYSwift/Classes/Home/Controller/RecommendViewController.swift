@@ -11,10 +11,11 @@ import UIKit
 private let kItemMargin : CGFloat = 10
 private let kHeaderViewH : CGFloat = 50
 
-private let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
-private let kNormalItemH = kNormalItemW * 3 / 4
-private let kPrettyItemH = kNormalItemW * 4 / 3
-private let kCycleViewH = kScreenW * 3 / 8
+private let kNormalItemW : CGFloat = (kScreenW - 3 * kItemMargin) / 2
+private let kNormalItemH : CGFloat = kNormalItemW * 3 / 4
+private let kPrettyItemH : CGFloat = kNormalItemW * 4 / 3
+private let kCycleViewH : CGFloat = kScreenW * 3 / 8
+private let kGameViewH : CGFloat = 90.0
 
 private let kCollectionNormalCellID = "kCollectionNormalCellID"
 private let kCollectionPrettyCellID = "kCollectionPrettyCellID"
@@ -46,8 +47,14 @@ class RecommendViewController: UIViewController {
     
     private lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    
+    private lazy var gameView : RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
     
     override func viewDidLoad() {
@@ -64,7 +71,8 @@ extension RecommendViewController {
     private func setupUI() {
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.addSubview(gameView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
         loadData()
     }
 }
@@ -73,6 +81,8 @@ extension RecommendViewController {
     private func loadData() {
         recommendVM.requestData {
             self.collectionView.reloadData()
+            
+            self.gameView.groups = self.recommendVM.anchorGroups
         }
         
         recommendVM.requestCycleData {
