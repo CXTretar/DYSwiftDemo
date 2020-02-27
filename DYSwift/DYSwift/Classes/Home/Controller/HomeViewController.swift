@@ -30,7 +30,9 @@ class HomeViewController: UIViewController {
         // 2.确定所有的子控制器
         var childVCs = [UIViewController]()
         childVCs.append(RecommendViewController())
-        for i in 0..<3 {
+        childVCs.append(GameViewController())
+        
+        for i in 0..<2 {
             let childVC = UIViewController()
             childVC.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(childVC)
@@ -94,7 +96,7 @@ extension HomeViewController: PageTitleViewDelegate {
 // MARK:- 遵守PageContentViewDelegate协议
 extension HomeViewController: PageContentViewDelegate {
     func pageContentViewScroll(_ contentView: PageContentView, _ progress: CGFloat, _ sourceIndex: Int, _ targetIndex: Int) {
-
+        
         pageTitleView.setTitleWithProgress(progress, sourceIndex, targetIndex)
         
     }
