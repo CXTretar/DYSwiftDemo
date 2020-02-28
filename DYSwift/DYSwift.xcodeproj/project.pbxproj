@@ -35,6 +35,8 @@
 		CA55DFFF2404B8EA00FD4C5C /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55DFFE2404B8EA00FD4C5C /* BaseGameModel.swift */; };
 		CA55E0292409061900FD4C5C /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E0282409061900FD4C5C /* AmuseViewController.swift */; };
 		CA55E02B2409728C00FD4C5C /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E02A2409728C00FD4C5C /* AmuseViewModel.swift */; };
+		CA55E02E24097A8A00FD4C5C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E02D24097A8A00FD4C5C /* BaseViewModel.swift */; };
+		CA55E03024097C6700FD4C5C /* BaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E02F24097C6700FD4C5C /* BaseAnchorViewController.swift */; };
 		CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		CA55DFFE2404B8EA00FD4C5C /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		CA55E0282409061900FD4C5C /* AmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
 		CA55E02A2409728C00FD4C5C /* AmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
+		CA55E02D24097A8A00FD4C5C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		CA55E02F24097C6700FD4C5C /* BaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnchorViewController.swift; sourceTree = "<group>"; };
 		CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,14 @@
 				CA233A4D23E5CA25007F0D53 /* RecommendViewModel.swift */,
 				CA55DFFA2404B7B100FD4C5C /* GameViewModel.swift */,
 				CA55E02A2409728C00FD4C5C /* AmuseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA55E02C24097A7000FD4C5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA55E02D24097A8A00FD4C5C /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +247,7 @@
 		CA94AA8323BB424D009D27EB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CA55E02C24097A7000FD4C5C /* ViewModel */,
 				CA94AAA123BCF290009D27EB /* Controller */,
 				CA94AAA023BCF290009D27EB /* Model */,
 				CA94AAA223BCF290009D27EB /* View */,
@@ -257,6 +270,7 @@
 			children = (
 				CA94AA9223BB7EAA009D27EB /* Main.storyboard */,
 				CA94AA9E23BCF030009D27EB /* MainViewController.swift */,
+				CA55E02F24097C6700FD4C5C /* BaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +550,8 @@
 				CA55DFE92403F3FA00FD4C5C /* CycleModel.swift in Sources */,
 				CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */,
 				CA55E0292409061900FD4C5C /* AmuseViewController.swift in Sources */,
+				CA55E02E24097A8A00FD4C5C /* BaseViewModel.swift in Sources */,
+				CA55E03024097C6700FD4C5C /* BaseAnchorViewController.swift in Sources */,
 				CA94AA8523BB42DC009D27EB /* SceneDelegate.swift in Sources */,
 				CA94AAB023BCF30F009D27EB /* HomeViewController.swift in Sources */,
 				CA233A5023E5CCC4007F0D53 /* AnchorGroup.swift in Sources */,
