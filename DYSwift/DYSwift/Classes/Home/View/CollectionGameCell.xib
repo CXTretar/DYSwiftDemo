@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="105" height="117"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-vq-ZQG">
-                        <rect key="frame" x="37" y="78" width="31" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZST-vq-ZQG">
+                        <rect key="frame" x="0.0" y="78" width="105" height="31"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
@@ -46,13 +46,16 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="ZST-vq-ZQG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5bP-ia-zjQ"/>
                 <constraint firstAttribute="trailing" secondItem="ple-XR-JVR" secondAttribute="trailing" id="HAS-fx-Nrb"/>
+                <constraint firstAttribute="trailing" secondItem="ZST-vq-ZQG" secondAttribute="trailing" id="JkP-Cd-TQz"/>
                 <constraint firstItem="ZST-vq-ZQG" firstAttribute="top" secondItem="hQH-OB-5U7" secondAttribute="bottom" constant="5" id="OnB-Ef-Pod"/>
                 <constraint firstItem="hQH-OB-5U7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Qka-6R-zaC"/>
                 <constraint firstItem="ple-XR-JVR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="btg-xS-v7f"/>
                 <constraint firstItem="ZST-vq-ZQG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lfv-Ie-f8V"/>
                 <constraint firstItem="hQH-OB-5U7" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="q0K-XF-aAi"/>
                 <constraint firstAttribute="bottom" secondItem="ple-XR-JVR" secondAttribute="bottom" constant="-1" id="u2U-lt-7Oj"/>
+                <constraint firstItem="ple-XR-JVR" firstAttribute="top" secondItem="ZST-vq-ZQG" secondAttribute="bottom" constant="8" symbolic="YES" id="xO5-dD-tri"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="105" height="117"/>

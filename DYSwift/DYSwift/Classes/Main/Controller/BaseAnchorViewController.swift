@@ -49,15 +49,15 @@ class BaseAnchorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func setupUI() {
-        // 将菜单的View添加到collectionView中
-        view.addSubview(collectionView)
-    }
 }
 
 // MARK:- 设置UI界面
 extension BaseAnchorViewController {
     
+    @objc func setupUI() {
+        // 将菜单的View添加到collectionView中
+        view.addSubview(collectionView)
+    }
 }
 
 // MARK:- 加载数据
