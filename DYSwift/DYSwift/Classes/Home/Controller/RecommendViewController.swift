@@ -26,6 +26,11 @@ class RecommendViewController: BaseAnchorViewController {
         gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
         return gameView
     }()
+
+}
+
+// MARK:- 设置UI界面内容
+extension RecommendViewController {
     
     override func setupUI() {
         super.setupUI()
@@ -34,12 +39,6 @@ class RecommendViewController: BaseAnchorViewController {
         collectionView.addSubview(gameView)
         collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
-    
-}
-
-// MARK:- 设置UI界面内容
-extension RecommendViewController {
-    
 }
 
 
@@ -60,6 +59,9 @@ extension RecommendViewController {
             groups.append(moreGroup)
             
             self.gameView.groups = groups
+            
+            // 数据请求完成
+            self.loadDataFinished()
         }
         
         recommendVM.requestCycleData {

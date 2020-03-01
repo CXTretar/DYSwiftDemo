@@ -19,7 +19,7 @@ let kCollectionNormalCellID = "kCollectionNormalCellID"
 let kCollectionPrettyCellID = "kCollectionPrettyCellID"
 private let kHeaderViewID = "kHeaderViewID"
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     var baseVM : BaseViewModel!
     lazy var collectionView : UICollectionView = {[unowned self] in
@@ -44,7 +44,7 @@ class BaseAnchorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        
         loadData()
         // Do any additional setup after loading the view.
     }
@@ -54,9 +54,14 @@ class BaseAnchorViewController: UIViewController {
 // MARK:- 设置UI界面
 extension BaseAnchorViewController {
     
-    @objc func setupUI() {
+    override func setupUI() {
+        
+        contentView = collectionView
+        
         // 将菜单的View添加到collectionView中
         view.addSubview(collectionView)
+        
+        super.setupUI()
     }
 }
 

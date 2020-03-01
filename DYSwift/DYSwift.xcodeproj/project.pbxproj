@@ -43,6 +43,7 @@
 		CA55E038240A5E8C00FD4C5C /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55E036240A5E8C00FD4C5C /* AmuseMenuViewCell.xib */; };
 		CA55E03A240B5C6500FD4C5C /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E039240B5C6500FD4C5C /* FunnyViewController.swift */; };
 		CA55E03C240B5CEF00FD4C5C /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E03B240B5CEF00FD4C5C /* FunnyViewModel.swift */; };
+		CA55E03E240B9BBE00FD4C5C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */; };
 		CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
@@ -99,6 +100,7 @@
 		CA55E036240A5E8C00FD4C5C /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		CA55E039240B5C6500FD4C5C /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		CA55E03B240B5CEF00FD4C5C /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
+		CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				CA94AA9223BB7EAA009D27EB /* Main.storyboard */,
 				CA94AA9E23BCF030009D27EB /* MainViewController.swift */,
 				CA55E02F24097C6700FD4C5C /* BaseAnchorViewController.swift */,
+				CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				CA55DFF924043A4000FD4C5C /* GameViewController.swift in Sources */,
 				CA55DFFB2404B7B100FD4C5C /* GameViewModel.swift in Sources */,
 				CA94AA9F23BCF030009D27EB /* MainViewController.swift in Sources */,
+				CA55E03E240B9BBE00FD4C5C /* BaseViewController.swift in Sources */,
 				CA94AAB923BD8FBE009D27EB /* PageContentView.swift in Sources */,
 				CA55DFE92403F3FA00FD4C5C /* CycleModel.swift in Sources */,
 				CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */,
