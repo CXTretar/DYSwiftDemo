@@ -100,3 +100,28 @@ extension BaseAnchorViewController : UICollectionViewDataSource, UICollectionVie
         return headerView
     }
 }
+
+extension BaseAnchorViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let anchorModel = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        anchorModel.isVertical == 1 ? presentShowRoomVc() : pushNormalRoomVc()
+        
+    }
+    
+    private func presentShowRoomVc() {
+        let showRoomVC = RoomShowViewController()
+         /**
+         iOS13更新之后，present到新的页面，没有全屏显示，这是因为增加了一个控制器属性modalPresentationStyle，默认值是auto，也就不是全屏的，我们可以在present之前修改此属性为.fullScreen
+         
+         */
+//        showRoomVC.modalPresentationStyle = .fullScreen
+        present(showRoomVC, animated: true, completion: nil)
+    }
+    private func pushNormalRoomVc() {
+        let normalRoomVC = RoomNormalViewController()
+        
+        navigationController?.pushViewController(normalRoomVC, animated: true)
+    }
+}

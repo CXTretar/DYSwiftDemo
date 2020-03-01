@@ -44,6 +44,9 @@
 		CA55E03A240B5C6500FD4C5C /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E039240B5C6500FD4C5C /* FunnyViewController.swift */; };
 		CA55E03C240B5CEF00FD4C5C /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E03B240B5CEF00FD4C5C /* FunnyViewModel.swift */; };
 		CA55E03E240B9BBE00FD4C5C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */; };
+		CA55E045240BACD300FD4C5C /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */; };
+		CA55E047240BACE100FD4C5C /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */; };
+		CA55E049240BB94100FD4C5C /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E048240BB94100FD4C5C /* CustomNavigationController.swift */; };
 		CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
@@ -101,6 +104,9 @@
 		CA55E039240B5C6500FD4C5C /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		CA55E03B240B5CEF00FD4C5C /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		CA55E048240BB94100FD4C5C /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +170,48 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CA55E03F240BACB300FD4C5C /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				CA55E040240BACB300FD4C5C /* ViewModel */,
+				CA55E041240BACB300FD4C5C /* Controller */,
+				CA55E042240BACB300FD4C5C /* Model */,
+				CA55E043240BACB300FD4C5C /* View */,
+			);
+			name = Room;
+			path = DYSwift/Classes/Room;
+			sourceTree = SOURCE_ROOT;
+		};
+		CA55E040240BACB300FD4C5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA55E041240BACB300FD4C5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */,
+				CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA55E042240BACB300FD4C5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA55E043240BACB300FD4C5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA94AA5D23BAF425009D27EB = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +246,7 @@
 		CA94AA7D23BB424D009D27EB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA55E03F240BACB300FD4C5C /* Room */,
 				CA94AA8323BB424D009D27EB /* Main */,
 				CA94AA7E23BB424D009D27EB /* Home */,
 				CA94AA8223BB424D009D27EB /* Live */,
@@ -287,6 +336,7 @@
 				CA94AA9E23BCF030009D27EB /* MainViewController.swift */,
 				CA55E02F24097C6700FD4C5C /* BaseAnchorViewController.swift */,
 				CA55E03D240B9BBE00FD4C5C /* BaseViewController.swift */,
+				CA55E048240BB94100FD4C5C /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -565,6 +615,7 @@
 				CA94AAB523BD7D14009D27EB /* PageTitleView.swift in Sources */,
 				CA55E03A240B5C6500FD4C5C /* FunnyViewController.swift in Sources */,
 				CA233A3C23E08B68007F0D53 /* CollectionHeaderView.swift in Sources */,
+				CA55E047240BACE100FD4C5C /* RoomShowViewController.swift in Sources */,
 				CA94AAB323BCF8ED009D27EB /* UIBarButtonItem-Extension.swift in Sources */,
 				CA55DFFF2404B8EA00FD4C5C /* BaseGameModel.swift in Sources */,
 				CA55DFEF24042CFD00FD4C5C /* RecommendGameView.swift in Sources */,
@@ -572,6 +623,7 @@
 				CA55DFFB2404B7B100FD4C5C /* GameViewModel.swift in Sources */,
 				CA94AA9F23BCF030009D27EB /* MainViewController.swift in Sources */,
 				CA55E03E240B9BBE00FD4C5C /* BaseViewController.swift in Sources */,
+				CA55E045240BACD300FD4C5C /* RoomNormalViewController.swift in Sources */,
 				CA94AAB923BD8FBE009D27EB /* PageContentView.swift in Sources */,
 				CA55DFE92403F3FA00FD4C5C /* CycleModel.swift in Sources */,
 				CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */,
@@ -594,6 +646,7 @@
 				CA55DFE22403C6D600FD4C5C /* RecommendCycleView.swift in Sources */,
 				CA55E03C240B5CEF00FD4C5C /* FunnyViewModel.swift in Sources */,
 				CA233A4223E30C72007F0D53 /* CollectionNormalCell.swift in Sources */,
+				CA55E049240BB94100FD4C5C /* CustomNavigationController.swift in Sources */,
 				CA233A5223E5CE01007F0D53 /* AnchorModel.swift in Sources */,
 				CA55DFEC2404214400FD4C5C /* CollectionCycleCell.swift in Sources */,
 				CA233A3923DFDFB9007F0D53 /* RecommendViewController.swift in Sources */,
