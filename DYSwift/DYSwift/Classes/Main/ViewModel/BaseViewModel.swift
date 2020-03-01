@@ -14,9 +14,9 @@ class BaseViewModel {
 }
 
 extension BaseViewModel {
-    func loadAnchorData(URLString: String, parameters: [String : String]? = nil, finishedCallback: @escaping () -> ()) {
+    func loadAnchorData(isGroupData: Bool = true, URLString: String, parameters: [String : Any]? = nil, finishedCallback: @escaping () -> ()) {
         NetworkTools.requestData(type: .POST, URLString: URLString, parameters: parameters) { (result) in
-
+            
             guard let resultDict = result as? [String : Any] else {
                 return
             }
@@ -24,9 +24,19 @@ extension BaseViewModel {
                 return
             }
             
-            for dict in dataArray {
-                self.anchorGroups.append(AnchorGroup(dict: dict))
+            if isGroupData == true {
+                for dict in dataArray {
+                    self.anchorGroups.append(AnchorGroup(dict: dict))
+                }
+            }else {
+                let anchorGroup = AnchorGroup()
+                
+                for dict in dataArray {
+                    anchorGroup.anchors.append(AnchorModel(dict: dict))
+                }
+                self.anchorGroups.append(anchorGroup)
             }
+            
             
             finishedCallback()
         }

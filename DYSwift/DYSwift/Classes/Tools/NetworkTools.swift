@@ -16,7 +16,7 @@ enum MethodType {
 
 class NetworkTools {
     
-    class func requestData(type: MethodType, URLString: String, parameters: [String : String]? = nil, finishedCallback:  @escaping (_ result: Any) -> ()) {
+    class func requestData(type: MethodType, URLString: String, parameters: [String : Any]? = nil, finishedCallback:  @escaping (_ result: Any) -> ()) {
         
         let method = type == .GET ? HTTPMethod.get : HTTPMethod.post
         

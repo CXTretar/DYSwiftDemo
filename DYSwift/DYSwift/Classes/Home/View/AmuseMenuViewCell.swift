@@ -52,7 +52,7 @@ extension AmuseMenuViewCell: UICollectionViewDataSource {
         cell.group = groups![indexPath.item]
         cell.clipsToBounds = true
 
-        return cell
+        return cell 
     }
     
 }
