@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38B20AF5415A52DF549680F5 /* Pods_DYSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44B2B99FB7EA0F44B6C8E10 /* Pods_DYSwift.framework */; };
+		A05C4050723C103A3AC6B88C /* libPods-DYSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 743BC4B7D36F89E068AA4C9F /* libPods-DYSwift.a */; };
 		CA233A3923DFDFB9007F0D53 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A3823DFDFB9007F0D53 /* RecommendViewController.swift */; };
 		CA233A3C23E08B68007F0D53 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA233A3A23E08B68007F0D53 /* CollectionHeaderView.swift */; };
 		CA233A3D23E08B68007F0D53 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA233A3B23E08B68007F0D53 /* CollectionHeaderView.xib */; };
@@ -47,6 +47,7 @@
 		CA55E045240BACD300FD4C5C /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */; };
 		CA55E047240BACE100FD4C5C /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */; };
 		CA55E049240BB94100FD4C5C /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55E048240BB94100FD4C5C /* CustomNavigationController.swift */; };
+		CA55E051240BF8B500FD4C5C /* RoomNormalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55E050240BF8B500FD4C5C /* RoomNormalViewController.xib */; };
 		CA7C955623E7116E009BB042 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */; };
 		CA94AA6A23BAF425009D27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AA6923BAF425009D27EB /* AppDelegate.swift */; };
 		CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA94AA7223BAF426009D27EB /* Assets.xcassets */; };
@@ -66,8 +67,22 @@
 		CA94AABB23BD916E009D27EB /* UIColor-Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA94AABA23BD916E009D27EB /* UIColor-Extentsion.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CA55E05E240C029300FD4C5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6594C4799D061640F4E54B91 /* Pods-DYSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.release.xcconfig"; path = "Target Support Files/Pods-DYSwift/Pods-DYSwift.release.xcconfig"; sourceTree = "<group>"; };
+		743BC4B7D36F89E068AA4C9F /* libPods-DYSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA233A3823DFDFB9007F0D53 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		CA233A3A23E08B68007F0D53 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		CA233A3B23E08B68007F0D53 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -107,6 +122,7 @@
 		CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
 		CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		CA55E048240BB94100FD4C5C /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		CA55E050240BF8B500FD4C5C /* RoomNormalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomNormalViewController.xib; sourceTree = "<group>"; };
 		CA7C955523E7116E009BB042 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		CA94AA6623BAF425009D27EB /* DYSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA94AA6923BAF425009D27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +142,6 @@
 		CA94AAB623BD7F83009D27EB /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		CA94AAB823BD8FBE009D27EB /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		CA94AABA23BD916E009D27EB /* UIColor-Extentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extentsion.swift"; sourceTree = "<group>"; };
-		E44B2B99FB7EA0F44B6C8E10 /* Pods_DYSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5677FFE4514F17B68E6A190 /* Pods-DYSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYSwift.debug.xcconfig"; path = "Target Support Files/Pods-DYSwift/Pods-DYSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B20AF5415A52DF549680F5 /* Pods_DYSwift.framework in Frameworks */,
+				A05C4050723C103A3AC6B88C /* libPods-DYSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CA55E044240BACD300FD4C5C /* RoomNormalViewController.swift */,
+				CA55E050240BF8B500FD4C5C /* RoomNormalViewController.xib */,
 				CA55E046240BACE100FD4C5C /* RoomShowViewController.swift */,
 			);
 			path = Controller;
@@ -477,7 +493,7 @@
 		FBDBF06CD965B5A9AC8DFDC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E44B2B99FB7EA0F44B6C8E10 /* Pods_DYSwift.framework */,
+				743BC4B7D36F89E068AA4C9F /* libPods-DYSwift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -493,7 +509,7 @@
 				CA94AA6223BAF425009D27EB /* Sources */,
 				CA94AA6323BAF425009D27EB /* Frameworks */,
 				CA94AA6423BAF425009D27EB /* Resources */,
-				256960883F4B9943B8926A62 /* [CP] Embed Pods Frameworks */,
+				CA55E05E240C029300FD4C5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -546,6 +562,7 @@
 				CA55E038240A5E8C00FD4C5C /* AmuseMenuViewCell.xib in Resources */,
 				CA233A3D23E08B68007F0D53 /* CollectionHeaderView.xib in Resources */,
 				CA233A4323E30C72007F0D53 /* CollectionNormalCell.xib in Resources */,
+				CA55E051240BF8B500FD4C5C /* RoomNormalViewController.xib in Resources */,
 				CA94AA7323BAF426009D27EB /* Assets.xcassets in Resources */,
 				CA233A4723E31473007F0D53 /* CollectionPrettyCell.xib in Resources */,
 				CA94AA9323BB7EAA009D27EB /* Main.storyboard in Resources */,
@@ -584,23 +601,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		256960883F4B9943B8926A62 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DYSwift/Pods-DYSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DYSwift/Pods-DYSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DYSwift/Pods-DYSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -788,6 +788,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29C2LLD5FB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"/**",
+				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -808,6 +814,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29C2LLD5FB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher\"/**",
+				);
 				INFOPLIST_FILE = DYSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
