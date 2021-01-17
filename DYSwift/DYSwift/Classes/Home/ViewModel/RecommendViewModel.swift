@@ -87,7 +87,7 @@ extension RecommendViewModel {
     }
     
     func requestCycleData(finishedCallback: @escaping ()->()) {
-        NetworkTools.requestData(type: .POST, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+        NetworkTools.requestData(type: .GET, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: nil ) { (result) in
             guard let resultDict = result as?  [String : NSObject] else {
                 return
             }

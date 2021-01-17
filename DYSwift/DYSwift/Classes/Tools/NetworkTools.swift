@@ -26,9 +26,24 @@ class NetworkTools {
                 return
             }
             
-            finishedCallback(result)
+            finishedCallback(result);
         }
         
     }
-
+    
+    
+    func loadStatus(pullup:Bool, completion:@escaping ( _ isSuccess:Bool) -> ()){
+        let isSuccess = true;
+        
+        print(isSuccess)
+    }
+    
+    
+    func test() {
+        
+        self.loadStatus(pullup: true) { (isSuccess) in
+             print(isSuccess)
+        }
+    }
+    
 }
